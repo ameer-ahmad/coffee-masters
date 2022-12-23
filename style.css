@@ -28,8 +28,9 @@ body {
 }
 
 .coffee-grid {
-    width: 1080px;
+    width: 1440px;
     display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     'items name'
     'items payment';
@@ -52,8 +53,9 @@ body {
 
 .order-items, .order-name, .order-payment {
     background-color: #eee1d5;
-    border-radius: 5px;
-    color: #ac8a6b;
+    border-radius: 10px;
+    color: #a37e5a;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
 .small-heading {
@@ -69,8 +71,9 @@ body {
     'quantity item . . price'
     '. addons . . .';
     margin: 25px 25px 25px 20px;
-    border-bottom: 1px solid #e6ccb3;
+    border-bottom: 2px solid #e6ccb3;
     padding-bottom: 15px;
+    box-sizing: border-box;
 }
 
 .items-grid:last-child {
@@ -86,6 +89,7 @@ body {
     grid-area: item;
     color: #43281c;
     font-weight: 600;
+    padding-bottom: 5px;
 }
 
 .price {
@@ -98,4 +102,80 @@ body {
     grid-area: addons;
     list-style: none;
     font-size: 14px;
+}
+
+.addons li {
+    padding-bottom: 5px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 15px;
+    position: relative;
+}
+
+.order-input {
+    background-color: #eee1d5;
+    border: 1px solid #a37e5a;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.label-order {
+    position: absolute;
+    font-size: 14px;
+    top: -9px;
+    left: 35px;
+    background-color: #eee1d5;
+    padding: 0 5px;
+}
+
+.order-input.ccv {
+    width: 30%;
+}
+
+.order-input {
+    padding-left: 40px;
+    font-size: 18px;
+    color: #43281c;
+}
+
+.order-input:focus {
+    outline-color: #43281c;
+}
+
+.place-order-flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.total-flex-container {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-bottom: 25px;
+}
+
+.price-flex-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    color: #43281c;
+}
+
+.price-flex-container.total {
+    padding-top: 15px;
+    font-weight: 600;
+}
+
+.place-order-btn {
+    width: 90%;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    background-color: #deb993;
+    font-size: 18px;
+    color: #43281c;
 }
